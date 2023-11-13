@@ -7,5 +7,10 @@ describe("Romaniser ", () => {
         const result = sut.Romanise(1);
         expect(result).toBe("I");
     });
+    it("returns II for 2", () => {
+        const sut = new Romaniser_1.Romaniser();
+        const result = sut.Romanise(2);
+        expect(result).toBe("II");
+    });
 });
 //# sourceMappingURL=Romaniser.test.js.map

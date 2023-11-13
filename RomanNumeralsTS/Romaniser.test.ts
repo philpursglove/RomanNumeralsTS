@@ -8,4 +8,12 @@ describe("Romaniser ", () => {
 
         expect(result).toBe("I");
     });
+
+    it("returns II for 2", () => {
+        const sut = new Romaniser();
+
+        const result = sut.Romanise(2);
+
+        expect(result).toBe("II");
+    });
 });
