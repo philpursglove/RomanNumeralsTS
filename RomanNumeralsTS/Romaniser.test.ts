@@ -31,6 +31,13 @@ describe("Romaniser ", () => {
         const result = sut.Romanise(4);
 
         expect(result).toBe("IV");
-
     });
+
+    it("returns V for 5", () => {
+        const sut = new Romaniser();
+
+        const result = sut.Romanise(5);
+
+        expect(result).toBe("V");
+    })
 });
