@@ -4,11 +4,8 @@ exports.Romaniser = void 0;
 class Romaniser {
     Romanise(arabicNumber) {
         let result = "";
-        if (arabicNumber === 2) {
-            result = "II";
-        }
-        else {
-            result = "I";
+        for (var i = 0; i < arabicNumber; i++) {
+            result += "I";
         }
         return result;
     }
