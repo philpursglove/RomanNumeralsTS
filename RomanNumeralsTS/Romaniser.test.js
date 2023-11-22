@@ -17,5 +17,10 @@ describe("Romaniser ", () => {
         const result = sut.Romanise(3);
         expect(result).toBe("III");
     });
+    it("returns IV for 4", () => {
+        const sut = new Romaniser_1.Romaniser();
+        const result = sut.Romanise(4);
+        expect(result).toBe("IV");
+    });
 });
 //# sourceMappingURL=Romaniser.test.js.map

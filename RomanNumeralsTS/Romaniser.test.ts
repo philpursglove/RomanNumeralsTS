@@ -23,5 +23,14 @@ describe("Romaniser ", () => {
         const result = sut.Romanise(3);
 
         expect(result).toBe("III");
-    })
+    });
+
+    it("returns IV for 4", () => {
+        const sut = new Romaniser();
+
+        const result = sut.Romanise(4);
+
+        expect(result).toBe("IV");
+
+    });
 });
