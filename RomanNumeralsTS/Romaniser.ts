@@ -2,7 +2,7 @@ export class Romaniser {
     Romanise(arabicNumber: number): string {
         let result: string = "";
 
-        if (arabicNumber > 5) {
+        if (arabicNumber >= 5) {
             result += "V";
             arabicNumber -= 5;
         }

@@ -2,35 +2,25 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const Romaniser_1 = require("./Romaniser");
 describe("Romaniser ", () => {
-    it("returns I for 1", () => {
-        const sut = new Romaniser_1.Romaniser();
-        const result = sut.Romanise(1);
-        expect(result).toBe("I");
+    let _sut;
+    beforeEach(() => {
+        _sut = new Romaniser_1.Romaniser();
     });
-    it("returns II for 2", () => {
-        const sut = new Romaniser_1.Romaniser();
-        const result = sut.Romanise(2);
-        expect(result).toBe("II");
-    });
-    it("returns III for 3", () => {
-        const sut = new Romaniser_1.Romaniser();
-        const result = sut.Romanise(3);
-        expect(result).toBe("III");
+    it.each([[1, "I"], [2, "II"], [3, "III"]])("For %i returns %s ", (arabic, roman) => {
+        const result = _sut.Romanise(arabic);
+        expect(result).toBe(roman);
     });
     it("returns IV for 4", () => {
-        const sut = new Romaniser_1.Romaniser();
-        const result = sut.Romanise(4);
+        const result = _sut.Romanise(4);
         expect(result).toBe("IV");
     });
     it("returns V for 5", () => {
-        const sut = new Romaniser_1.Romaniser();
-        const result = sut.Romanise(5);
+        const result = _sut.Romanise(5);
         expect(result).toBe("V");
     });
-    it("returns VI for 6", () => {
-        const sut = new Romaniser_1.Romaniser();
-        const result = sut.Romanise(6);
-        expect(result).toBe("VI");
+    it.each([[6, "VI"], [7, "VII"], [8, "VIII"]])("For %i returns %s", (arabic, roman) => {
+        const result = _sut.Romanise(arabic);
+        expect(result).toBe(roman);
     });
 });
 //# sourceMappingURL=Romaniser.test.js.map

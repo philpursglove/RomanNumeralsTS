@@ -4,13 +4,11 @@ exports.Romaniser = void 0;
 class Romaniser {
     Romanise(arabicNumber) {
         let result = "";
+        if (arabicNumber >= 5) {
+            result += "V";
+            arabicNumber -= 5;
+        }
         switch (arabicNumber) {
-            case 6:
-                result = "VI";
-                break;
-            case 5:
-                result = "V";
-                break;
             case 4:
                 result = "IV";
                 break;

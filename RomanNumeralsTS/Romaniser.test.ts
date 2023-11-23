@@ -2,28 +2,16 @@ import { Romaniser } from "./Romaniser";
 
 describe("Romaniser ", () => {
 
-    let _sut;
+    let _sut: Romaniser;
 
     beforeEach(() => {
         _sut = new Romaniser();
     });
 
-    it.each([[1,"I"]])("returns I for 1", (arabic, roman) => {
+    it.each([[1, "I"], [2, "II"], [3, "III"]])("For %i returns %s ", (arabic, roman) => {
         const result = _sut.Romanise(arabic);
 
         expect(result).toBe(roman);
-    });
-
-    it("returns II for 2", () => {
-        const result = _sut.Romanise(2);
-
-        expect(result).toBe("II");
-    });
-
-    it("returns III for 3", () => {
-        const result = _sut.Romanise(3);
-
-        expect(result).toBe("III");
     });
 
     it("returns IV for 4", () => {
@@ -38,9 +26,9 @@ describe("Romaniser ", () => {
         expect(result).toBe("V");
     });
 
-    it("returns VI for 6", () => {
-        const result = _sut.Romanise(6);
+    it.each([[6, "VI"], [7, "VII"], [8, "VIII"]])("For %i returns %s", (arabic, roman) => {
+        const result = _sut.Romanise(arabic);
 
-        expect(result).toBe("VI");
+        expect(result).toBe(roman);
     });
 });
