@@ -5,6 +5,9 @@ class Romaniser {
     Romanise(arabicNumber) {
         let result = "";
         switch (arabicNumber) {
+            case 6:
+                result = "VI";
+                break;
             case 5:
                 result = "V";
                 break;
